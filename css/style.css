@@ -54,3 +54,31 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Solar System Section Styles */
+#solar-system-container {
+    position: relative;
+    height: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 10s infinite linear;
+}
+
+/* Add glowing effect to planets */
+.planet:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
