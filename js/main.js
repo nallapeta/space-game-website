@@ -1,29 +1,24 @@
 const solarSystemContainer = document.getElementById('solar-system-container');
 
-function createPlanet(name, size, color, distance, orbitTime) {
+// Function to create planets in different orbits
+function createPlanet(className, size, color, orbitRadius, orbitTime) {
     const planet = document.createElement('div');
-    planet.classList.add('planet');
+    planet.classList.add('planet', className);
     planet.style.width = size + 'px';
     planet.style.height = size + 'px';
     planet.style.backgroundColor = color;
-    planet.style.animationDuration = orbitTime + 's'; // Make orbit time unique
-    planet.style.borderRadius = '50%';
-    planet.style.transformOrigin = distance + 'px';
+    planet.style.transformOrigin = orbitRadius + 'px'; // Orbit distance from the Sun
+    planet.style.animationDuration = orbitTime + 's'; // Orbit speed
 
     solarSystemContainer.appendChild(planet);
-
-    // Add interaction on click
-    planet.addEventListener('click', () => {
-        alert(`Upcoming fixtures for ${name}`);
-    });
 }
 
-// Create planets with orbit times
-createPlanet('Mercury', 30, '#b0b0b0', 100, 5);
-createPlanet('Venus', 50, '#f5a623', 150, 7);
-createPlanet('Earth', 60, '#0077be', 200, 9);
-createPlanet('Mars', 40, '#e44d2e', 250, 11);
-createPlanet('Jupiter', 100, '#f7b236', 300, 14);
-createPlanet('Saturn', 80, '#f9c74f', 350, 17);
-createPlanet('Uranus', 60, '#76d7c4', 400, 20);
-createPlanet('Neptune', 60, '#5271ff', 450, 22);
+// Create planets with different orbits and times
+createPlanet('mercury', 20, 'grey', 70, 8);    // Orbiting closest to the Sun
+createPlanet('venus', 30, 'orange', 100, 10);  // Second orbit
+createPlanet('earth', 35, 'blue', 130, 12);    // Third orbit
+createPlanet('mars', 25, 'red', 160, 14);      // Fourth orbit
+createPlanet('jupiter', 50, 'brown', 200, 18); // Fifth orbit
+createPlanet('saturn', 45, 'goldenrod', 250, 20); // Sixth orbit
+createPlanet('uranus', 40, 'lightblue', 300, 22); // Seventh orbit
+createPlanet('neptune', 40, 'royalblue', 350, 24); // Eighth orbit
