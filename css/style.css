@@ -82,3 +82,27 @@ footer p {
         transform: rotate(360deg) translateX(150px) rotate(-360deg);
     }
 }
+
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #00ffcc;
+}
+
+th {
+    background-color: rgba(0, 255, 204, 0.3);
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
