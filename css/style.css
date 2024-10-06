@@ -76,21 +76,24 @@ nav ul li a {
 }
 
 .solar-system {
-    text-align: center;
-    margin-top: 100px; /* Increased margin to create space between the header and solar system */
-    margin-bottom: 0px; /* Added margin to create space above the footer */
-    position: relative; /* So we can use z-index for this */
-    z-index: 50; /* Ensure solar system stays above most elements but below the header/footer */
+    display: flex;
+    justify-content: center; /* Horizontally centers the solar system */
+    align-items: center; /* Vertically centers the solar system */
+    height: 100vh; /* Takes full viewport height */
+    position: relative;
+    z-index: 50;
+    margin-top: 0; /* You can adjust this if needed */
+    margin-bottom: 0;
 }
 
 #solar-system-container {
     position: relative;
     height: 1000px;
     width: 1000px;
-    margin: 0 auto;
     border-radius: 50%;
-    
-    z-index: 60; /* Ensures planets are clickable */
+    margin: 0 auto;
+    z-index: 60;
+    /* Optional: If you want to ensure the entire system stays centered */
 }
 
 #sun {
@@ -99,15 +102,13 @@ nav ul li a {
     left: 50%;
     width: 150px;
     height: 150px;
-    margin-top: -75px; /* Half the width and height to center the Sun */
-    margin-left: -75px;
     background-color: yellow;
-    background-image: url("");
-    background-position: center;
-    background-size: 210px;
     border-radius: 50%;
-    z-index: 70; /* Ensure the Sun stays clickable */
+    background-position: center;
+    background-size: cover;
     box-shadow: 0 0 50px rgba(255, 187, 0, 0.8), 0 0 100px rgba(255, 255, 0, 0.6);
+    transform: translate(-50%, -50%); /* This will ensure it's centered */
+    z-index: 70;
 }
 
 /* Planet container for each orbit */
