@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url("../images/bg.jpg");
+    background-color: #000000;
+    background-repeat: repeat-y; /* Repeats the image vertically */
+    background-position: top center; /* Starts from the top and centers the image horizontally */
+    width: 100%;
+    height: 100vh; /* This ensures the body takes the full viewport height */
+    background-attachment: fixed;
+    color: #fff;
+}
+
+header {
+    padding: 30px; /* Increased padding */
+    color: #fff;
+    position: relative;
+    z-index: 100; /* Higher z-index than the solar system */
+}
+
+header h1 {
+    color: #00ffcc;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00ffcc;
+}
+
+
+.fixed-text {
+    position: fixed; /* Keeps the element fixed on the screen */
+    top: 20px; /* Distance from the top of the viewport */
+    left: 20px; /* Distance from the left side of the viewport */
+    z-index: 1000; /* Make sure it's above other content */
+    padding: 10px; /* Optional: add some padding */
+    font-size: 16px; /* Font size for the text */
+}
+
+.fixed-text2 {
+    position: fixed; /* Keeps the element fixed on the screen */
+    top: 20px; /* Distance from the top of the viewport */
+    right: 130px; /* Distance from the left side of the viewport */
+    z-index: 1000; /* Make sure it's above other content */
+    padding: 10px; /* Optional: add some padding */
+    font-size: 16px; /* Font size for the text */
+}
+
+.fixed-text3 {
+    position: fixed; /* Keeps the element fixed on the screen */
+    top: 20px; /* Distance from the top of the viewport */
+    right: 20px; /* Distance from the left side of the viewport */
+    z-index: 1000; /* Make sure it's above other content */
+    padding: 10px; /* Optional: add some padding */
+    font-size: 16px; /* Font size for the text */
+}
+
+.solar-system {
+    text-align: center;
+    margin-top: 100px; /* Increased margin to create space between the header and solar system */
+    margin-bottom: 0px; /* Added margin to create space above the footer */
+    position: relative; /* So we can use z-index for this */
+    z-index: 50; /* Ensure solar system stays above most elements but below the header/footer */
+}
+
+#solar-system-container {
+    position: relative;
+    height: 1000px;
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 50%;
+    
+    z-index: 60; /* Ensures planets are clickable */
+}
+
+#sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: -75px; /* Half the width and height to center the Sun */
+    margin-left: -75px;
+    background-color: yellow;
+    background-image: url("");
+    background-position: center;
+    background-size: 210px;
+    border-radius: 50%;
+    z-index: 70; /* Ensure the Sun stays clickable */
+    box-shadow: 0 0 50px rgba(255, 187, 0, 0.8), 0 0 100px rgba(255, 255, 0, 0.6);
+}
+
+/* Planet container for each orbit */
+.planet-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0; /* Centered rotation */
+    animation: rotate infinite linear;
+    z-index: 80; /* Ensure planet containers stay above solar system and are clickable */
+}
+
+/* Individual planets */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 90; /* Ensure planets are on top of everything */
+    background-size: cover; /* Ensure the image covers the entire planet */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+}
+
+/* Animations for planetary orbits */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mercury { width: 20px; height: 20px; background-color: rgba(128, 128, 128, 0); }
+.venus { width: 30px; height: 30px; background-color: rgba(255, 166, 0, 0); }
+.earth { width: 35px; height: 35px; background-color: rgba(0, 0, 255, 0); }
+.mars { width: 25px; height: 25px; background-color: rgba(255, 0, 0, 0); }
+.jupiter { width: 50px; height: 50px; background-color: rgba(165, 42, 42, 0); }
+.saturn { width: 45px; height: 45px; background-color: rgba(218, 165, 32, 0); }
+.uranus { width: 40px; height: 40px; background-color: rgba(173, 216, 230, 0); }
+.neptune { width: 40px; height: 40px; background-color: rgba(65, 105, 225, 0); }
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+    z-index: 100; /* Ensure footer stays above the solar system */
+}
+
+
+/* Add glowing effect to planets */
+.planet:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6);
+}

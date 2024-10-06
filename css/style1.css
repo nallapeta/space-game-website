@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Major+Mono+Display&family=Monoton&family=Sixtyfour&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: sans-serif;}
+body{
+    background-color: black;
+}
+.container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    margin:40px 20px 0 20px;
+
+}
+.container .heading{
+    width:50%;
+    padding-bottom:40px;
+
+}
+.container .heading h3{
+    padding: 20px;
+    margin: 50px;
+    
+    border-radius: 5%;
+    color: rgba(0, 255, 247, 0.847);
+    
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+  
+    font-variation-settings:
+"BLED" 0,
+"SCAN" 0;
+        font-size:30px;
+                    font-weight: 400;
+                    font-style: normal;
+    box-shadow: 0 8px 10px rgba(0, 255, 247, 0.495);
+    background-color: #000000;}
+.container .box{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+   
+    
+    
+
+}
+.container .box .dream{
+    display:flex;
+    flex-direction: column;
+    width:30.5%;
+    
+
+}
+.container .box .dream img{
+    
+    width:100%;
+    
+    border-radius:5px;
+    margin-bottom: 50px;
+    box-shadow: 8px 8px 15px rgba(0, 255, 247, 0.495);
+
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+    z-index: 100; /* Ensure footer stays above the solar system */
+    color: #ffffff;
+}
