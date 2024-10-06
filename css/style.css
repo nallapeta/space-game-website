@@ -62,6 +62,16 @@ nav ul li a {
     right: 20px; /* Distance from the left side of the viewport */
     z-index: 1000; /* Make sure it's above other content */
     padding: 10px; /* Optional: add some padding */
+}
+
+.text4 {
+    position: fixed; 
+    top: 20%;
+    right: 10%;
+    left: 10%;
+    text-align: center;
+    z-index: 0; /* Make sure it's above other content */
+    padding: 10px; /* Optional: add some padding */
     font-size: 16px; /* Font size for the text */
 }
 
@@ -152,4 +162,14 @@ footer {
 /* Add glowing effect to planets */
 .planet:hover {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+
+#disappearingText {
+    opacity: 1; /* Initial opacity: fully visible */
+    transition: opacity 2s ease; /* Transition effect over 2 seconds */
+}
+
+#disappearingText.hidden {
+    opacity: 0; /* Final opacity: fully invisible */
 }
