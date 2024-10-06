@@ -50,6 +50,9 @@ createPlanet('neptune', 40, './images/neptune.png', 300, 3762, 1, './planet fixt
 
 
 window.onload = function() {
-    // Scroll down 50% of the page height when the page loads
-    window.scrollTo(0, document.body.scrollHeight * 0.3);
+    setTimeout(function() {
+        // Add the 'hidden' class after 5 seconds to start fading out
+        document.getElementById('disappearingText').classList.add('hidden');
+    }, 15000);
+    window.scrollTo(0, document.body.scrollHeight * 0.2);
 };
